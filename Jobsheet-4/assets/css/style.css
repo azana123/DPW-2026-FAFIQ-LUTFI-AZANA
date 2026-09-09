@@ -53,13 +53,7 @@ main {
     padding: 0 1.5 rem;
 }
 
-.login-pg {
-    max-width: 400px;
-}
 
-.login-title {
-    text-align: center;
-}
 
 section {
     background-color: #fff;
@@ -192,6 +186,14 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
     background-color: #164869;
+}
+
+.login-pg {
+    max-width: 400px;
+}
+
+.login-title {
+    text-align: center;
 }
 
 /* Footer */
