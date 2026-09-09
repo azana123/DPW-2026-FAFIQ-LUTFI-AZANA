@@ -53,6 +53,14 @@ main {
     padding: 0 1.5 rem;
 }
 
+.login-pg {
+    max-width: 400px;
+}
+
+.login-title {
+    text-align: center;
+}
+
 section {
     background-color: #fff;
     border-radius: 8px;
