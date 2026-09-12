@@ -21,7 +21,7 @@ a:hover {
 }
 
 header {
-    background-color: #1d5b8a;
+    background-color: rgb(21, 85, 69);
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -61,7 +61,11 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: rgb(42, 131, 95);
+}
+
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1;
 }
 
 main section:nth-of-type(2) {
@@ -71,7 +75,7 @@ main section:nth-of-type(2) {
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
+    background-color: rgb(235, 245, 235);
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -86,7 +90,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: rgb(42, 131, 95);
 }
 
 table {
@@ -101,7 +105,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: rgb(42, 131, 95);
     color: #fff;
 }
 
@@ -127,8 +131,17 @@ td button:first-of-type {
     color: #fff;
 }
 
+td button:first-of-type:hover {
+    background-color: #ce9749;
+}
+
 td button:last-of-type {
     background-color: #d9534f;
+    color: #fff;
+}
+
+td button:last-of-type:hover {
+    background-color: #b34642;
     color: #fff;
 }
 
@@ -154,7 +167,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: rgb(18, 84, 79);
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -164,7 +177,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: rgb(14, 66, 62);
 }
 
 footer {
@@ -223,14 +236,25 @@ footer {
     }
 
     header nav {
-        display: none;
+        display: block;
         width: 100%;
         order: 3;
-        margin-top: 1rem;
+        margin-top: 0;
+        
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        
+        /* Animasi navbar mobile */
+        transition: max-height 0.4s ease-in-out, 
+                    opacity 0.3s ease-in-out, 
+                    margin-top 0.4s ease-in-out;
     }
 
     header nav.nav-open {
-        display: block;
+        max-height: 300px;
+        opacity: 1;
+        margin-top: 1rem;
     }
 
     header nav ul {
