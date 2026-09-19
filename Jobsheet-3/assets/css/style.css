@@ -209,7 +209,7 @@ footer {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     main section:nth-of-type(2) {
         grid-template-columns: repet(2, 1fr);
     }
