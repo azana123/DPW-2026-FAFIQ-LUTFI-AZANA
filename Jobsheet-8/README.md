@@ -9,5 +9,33 @@
 
 ## Persiapan database
 1. Melakukan instalasi dan setup postgresql18 di dalam void linux
-2. Sebelum menjalankan web harus menjalankan `php -S localhost:8000` 
+2. Menggunakan server bawaan php. Sebelum menjalankan web harus menjalankan `php -S localhost:8000` 
 3. Untuk mengetes perlu membuka `http:localhost:8000/index.php` (http tanpa s)
+
+## Struktur Folder
+```
+Jobsheet-8
+├── anggota
+│   ├── list.php
+│   ├── proses_tambah.php
+│   └── tambah.php
+├── assets
+│   ├── css
+│   │   └── style.css
+│   └── js
+│       └── app.js
+├── buku
+│   ├── list.php
+│   ├── proses_tambah.php
+│   └── tambah.php
+├── docs
+│   └── wireframe.md
+├── includes
+│   ├── footer.php
+│   ├── header.php
+│   └── koneksi.php
+├── index.php
+├── README.md
+└── sql
+    └── 01_buku_anggota.sql
+```
