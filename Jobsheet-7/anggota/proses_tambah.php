@@ -20,7 +20,7 @@ if (!empty($errors)) {
     exit;
 }
 
-if (!issets($_SESSION['anggota'])) {
+if (!isset($_SESSION['anggota'])) {
     $_SESSION['anggota'] = [];
 }
 
