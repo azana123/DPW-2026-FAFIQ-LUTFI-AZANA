@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <button type="button" class="btn-open" id="openBtn">+</button>
+        <h1>Notes</h1>
+        
+        <!-- POP UP -->
+        <div id="popupOverlay" class="popup-overlay">
+            <div class="popup-form">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2>Buat Catatan Baru</h2>
+                <form id="noteForm" class="note-form">
+                    <input type="text" id="noteTitle" placeholder="Judul" required>
+                    <textarea id="noteContent" placeholder="Catatan..." rows="4" required></textarea>
+                    <button type="submit" class="submit-btn">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="notesGrid" class="notes-grid"></div>
+    </main>
+
+    <footer>
+        <footer>
+        <p>&copy; 2026 Notes &mdash; All rights reserved</p>
+    </footer>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
