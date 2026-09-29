@@ -1,12 +1,12 @@
 <?php
-$page_title = "Tambah Buku";
+$page_title = "Tambah Anggota";
 include __DIR__ . '/../includes/header.php';
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 ?>
         <section>
-            <h2>Tambah Buku</h2>
+            <h2>Tambah Anggota</h2>
 
             <?php if ($flash): ?>
                 <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['pesan']; ?></p>
@@ -14,32 +14,20 @@ unset($_SESSION['flash']);
 
             <form id="form-tambah" method="post" action="proses_tambah.php">
                 <p>
-                    <label for="judul">Judul</label><br>
-                    <input type="text" id="judul" name="judul" required>
+                    <label for="nama">Nama</label><br>
+                    <input type="text" id="nama" name="nama" required>
                 </p>
                 <p>
-                    <label for="pengarang">Pengarang</label><br>
-                    <input type="text" id="pengarang" name="pengarang" required>
+                    <label for="no_anggota">No. Anggota</label><br>
+                    <input type="text" id="no_anggota" name="no_anggota" required>
                 </p>
                 <p>
-                    <label for="tahun">Tahun Terbit</label><br>
-                    <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
+                    <label for="alamat">Alamat</label><br>
+                    <input type="text" id="alamat" name="alamat">
                 </p>
                 <p>
-                    <label for="isbn">ISBN</label><br>
-                    <input type="text" id="isbn" name="isbn">
-                </p>
-                <p>
-                    <label for="stok">Stok</label><br>
-                    <input type="number" id="stok" name="stok" min="0" required>
-                </p>
-                <p>
-                    <label for="kategori">Kategori</label><br>
-                    <select id="kategori" name="kategori">
-                        <option value="fiksi">Fiksi</option>
-                        <option value="non-fiksi">Non-Fiksi</option>
-                        <option value="referensi">Referensi</option>
-                    </select>
+                    <label for="no_hp">No. HP</label><br>
+                    <input type="text" id="no_hp" name="no_hp">
                 </p>
                 <p>
                     <button type="submit">Simpan</button>
