@@ -1,0 +1,390 @@
+/* ===== Variable Root ===== */
+:root {
+    --bg-main: #f5f6f8;
+    --bg-surface: #ffffff;
+    --bg-card-stat: rgb(235, 245, 235);
+    --bg-table-hover: #eef4fa;
+    --bg-table-striped: #f7f9fb;
+
+    --text-primary: #2b2b2b;
+    --text-muted: #55677a;
+    --text-footer: #7a8794;
+    --text-on-accent: #ffffff;
+    --text-label: #444444;
+
+    --primary-header: rgb(21, 85, 69);
+    --accent-green: rgb(42, 131, 95);
+    --btn-submit: rgb(18, 84, 79);
+    --btn-submit-hover: rgb(14, 66, 62);
+
+    --link-color: #1d5b8a;
+
+    --warning: #f0ad4e;
+    --warning-hover: #ce9749;
+    --danger: #d9534f;
+    --danger-hover: #b34642;
+
+    --border-light: #e2e6ea;
+    --border-input: #cdd4da;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+    line-height: 1.5;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Header & Navbar (Flexbox) ===== */
+header {
+    background-color: var(--primary-header);
+    color: var(--text-on-accent);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+header nav a {
+    color: var(--text-on-accent);
+    font-weight: 500;
+}
+
+.auth-status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-on-accent);
+}
+
+.auth-status a {
+    color: var(--text-on-accent);
+    text-decoration: underline;
+}
+
+/* ===== Main Layout ===== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-header);
+}
+
+/* ===== Kartu Statistik (CSS Grid) ===== */
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1;
+}
+
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: var(--bg-card-stat);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-green);
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+thead {
+    background-color: var(--primary-header);
+    color: var(--text-on-accent);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--bg-table-striped);
+}
+
+tbody tr:hover {
+    background-color: var(--bg-table-hover);
+}
+
+td button {
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+td button:first-of-type,
+td a.btn-edit {
+    background-color: var(--warning);
+    color: var(--text-on-accent);
+}
+
+td button:first-of-type:hover,
+td a.btn-edit:hover {
+    background-color: var(--warning-hover);
+}
+
+td button:last-of-type {
+    background-color: var(--danger);
+    color: var(--text-on-accent);
+}
+
+td button:last-of-type:hover {
+    background-color: var(--danger-hover);
+}
+
+td a.btn-edit {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+td form.form-hapus {
+    display: inline;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+    color: var(--link-color);
+}
+
+.pagination a.active {
+    background-color: var(--primary-header);
+    color: var(--text-on-accent);
+    border-color: var(--primary-header);
+}
+
+.search-box form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.search-box button {
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--btn-submit);
+    color: var(--text-on-accent);
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: var(--btn-submit-hover);
+}
+
+/* ===== Form ===== */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: var(--text-label);
+}
+
+form input,
+form select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: var(--btn-submit);
+    color: var(--text-on-accent);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--btn-submit-hover);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: var(--text-footer);
+    font-size: 0.9rem;
+}
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ===== Hamburger Menu (JS-driven) ===== */
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: var(--text-on-accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: var(--danger);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet ke bawah */
+@media (max-width: 768px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    header nav.nav-open {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+}
