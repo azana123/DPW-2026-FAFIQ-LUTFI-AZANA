@@ -1,4 +1,4 @@
-const aboutParagraph = 
+const aboutLong = 
 `
 Lembaga ini bernama Lembaga Pendidikan Islam BAITUN NA'IM berkedudukan dan berkantor pusat di komplek Masjid 
 Jami BAITUN NA'IM Desa Ngadri, Kecamatan Binangun, Kabupaten Blitar.
@@ -20,6 +20,30 @@ dan secara nirlaba, lembaga ini mempunyai maksud dan tujuan di bidang keagamaan,
 Pada masa sekarang LPI BAITUN NA'IM telah berkembang menjadi sekolah yang besar dan diperhitungkan sebagai sekolah 
 percontohan terutama untuk sekolah di wilayah Ngadri, LPI BAITUN NA'IM menggunakan konsep kelas kecil mencapai 10-15 
 siswa sehingga para pendidik lebih fokus dalam mengelola kelas.
+
+<br><br>
 `;
 
-document.getElementById("my-paragraph").innerHTML = aboutParagraph;
+const aboutVisi =
+`
+Menjadi lembaga pendidikan Islam unggulan dalam mencetak generasi yang beriman, berilmu, 
+berakhlak, dan berdaya saing di tingkat nasional maupun global.
+
+<br><br>
+`;
+
+const aboutMisi =
+`
+1. Menyelenggarakan pendidikan Islam terpadu berbasis Al-Qur’an dan As-Sunnah.<br>
+2. Menanamkan nilai akhlakul karimah sejak usia dini.<br>
+3. Mengembangkan potensi akademik dan non-akademik peserta didik.<br>
+4. Mendorong terciptanya lingkungan belajar yang aman, islami, dan kondusif.<br>
+5. Membina tenaga pendidik yang profesional, berdedikasi, dan berintegritas.<br>
+6. Mengintegrasikan teknologi dalam proses pembelajaran.<br>
+
+<br>
+`;
+
+document.getElementById("my-paragraph").innerHTML = aboutLong;
+document.getElementById("my-visi").innerHTML = aboutVisi;
+document.getElementById("my-misi").innerHTML = aboutMisi;

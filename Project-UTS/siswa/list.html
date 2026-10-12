@@ -28,6 +28,43 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section>
+            <h2>Data Siswa</h2>
+            <div class="search-box">
+                <label for="search-input">Cari Data Siswa</label>
+                <input type="text" id="search-input" placeholder="Ketik nama siswa...">
+            </div>
+            <p id="loading-indicator" style="display:none;">Memuat data...</p>
+            <div class="refresh-button">
+                <p>
+                    <button type="button" class="refresh">&#x21BB; Refresh</button>
+                </p>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NISN</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Usia</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Baitunnaim. All rights reserved.</p>
+    </footer>
+    <script src="../assets/js/siswa.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 </html>

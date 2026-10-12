@@ -28,6 +28,41 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section>
+            <h2>Tambah Siswa</h2><br>
+            <form id="form-tambah-siswa">
+                <p>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukan nama...">
+                </p>
+                <p>
+                    <label for="nisn">NISN</label>
+                    <input type="text" id="nisn" name="nisn" required placeholder="Masukan NISN...">
+                </p>
+                <p>
+                    <label for="jk">Jenis Kelamin</label>
+                    <select id="jk" name="jk">
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-Laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="usia">Usia</label>
+                    <input type="number" id="usia" name="usia" min="0" required placeholder="Masukan Usia...">
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Baitunnaim. All rights reserved.</p>
+    </footer>
     <script src="../assets/js/script.js"></script>
 </body>
 </html>

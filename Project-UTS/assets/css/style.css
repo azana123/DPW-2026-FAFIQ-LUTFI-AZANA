@@ -59,6 +59,15 @@ a:hover {
     color: var(--text-on-accent-hover);
 }
 
+.about-link {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
 /* ===== Header ===== */
 header {
     background-color: var(--primary-header);
@@ -79,12 +88,11 @@ header div {
 .nav-toggle-label {
     display: none;
     font-size: 1.6rem;
-    color: #fff;
+    color: var(--bg-surface);
     background: none;
     border: none;
     cursor: pointer;
     margin-left: auto;
-
 }
 
 header h1 {
@@ -99,7 +107,8 @@ header nav ul {
 
 /* ===== Main Layout ===== */
 main {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1.5rem;
     flex: 1;
@@ -156,20 +165,149 @@ main section:nth-of-type(3) article p {
     color: var(--accent-green);
 }
 
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+thead {
+    background-color: var(--primary-header);
+    color: var(--bg-surface);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--bg-table-striped);
+}
+
+tbody tr:hover {
+    background-color: var(--bg-table-hover);
+}
+
+td button {
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+td button:first-of-type {
+    background-color: var(--warning);
+    color: var(--bg-surface);
+}
+
+td button:first-of-type:hover {
+    background-color: var(--warning-hover);
+}
+
+td button:last-of-type {
+    background-color: var(--danger);
+    color: var(--bg-surface);
+}
+
+td button:last-of-type:hover {
+    background-color: var(--danger-hover);
+    color: var(--bg-surface);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: var(--bg-surface);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    display: block;
+    color: var(--danger);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+}
+
+.refresh-button p button{
+    background-color: var(--btn-submit);
+    color: var(--bg-surface);
+    border: none;
+    padding: 0.35rem 0.7rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.refresh-button p button:hover {
+    background-color: var(--btn-submit-hover);
+}
+
+/* ===== Form ===== */
+form p {
+    margin-bottom: 1.7rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #444;
+}
+
+form input,
+form select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: var(--btn-submit);
+    color: var(--bg-surface);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--btn-submit-hover);
+}
+
 /* ===== Footer ===== */
 footer {
-    background-color: var(--primary-header);
     text-align: center;
     padding: 1.25rem;
     color: var(--text-footer);
     font-size: 0.8rem;
-}
-
-/* Huge Resolution Monitor */
-@media (max-width: 2000px) {
-    body {
-        font-size: 1.2px;
-    }
 }
 
 /* Tablet Device */

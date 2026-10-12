@@ -28,6 +28,41 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section>
+            <h2>Tambah Guru</h2><br>
+            <form id="form-tambah-guru">
+                <p>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukan nama...">
+                </p>
+                <p>
+                    <label for="nip">NIP</label>
+                    <input type="text" id="nip" name="nip" required placeholder="Masukan NIP...">
+                </p>
+                <p>
+                    <label for="jk">Jenis Kelamin</label>
+                    <select id="jk" name="jk">
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-Laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="usia">Usia</label>
+                    <input type="number" id="usia" name="usia" min="0" required placeholder="Masukan usia...">
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Baitunnaim. All rights reserved.</p>
+    </footer>
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
