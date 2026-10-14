@@ -197,6 +197,7 @@ td button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.85rem;
+    opacity: 85%;
 }
 
 td button:first-of-type {
@@ -267,6 +268,11 @@ td button:last-of-type:hover {
 }
 
 /* ===== Form ===== */
+section form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 form p {
     margin-bottom: 1.7rem;
 }
@@ -280,7 +286,7 @@ form label {
 
 form input,
 form select {
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     padding: 0.55rem 0.7rem;
     border: 1px solid var(--border-input);
@@ -329,8 +335,6 @@ footer {
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        
-        /* Animasi navbar mobile */
         transition: max-height 0.4s ease-in-out, 
                     opacity 0.3s ease-in-out, 
                     margin-top 0.4s ease-in-out;
@@ -355,6 +359,10 @@ footer {
     }
 
     main section:nth-of-type(3) {
+        grid-template-columns: 1fr;
+    }
+
+    section form {
         grid-template-columns: 1fr;
     }
 
