@@ -59,7 +59,7 @@ function initValidasiFormGuru() {
     form.addEventListener("submit", function (e) {
         let valid = true;
 
-        const nama = form.querySelector("[name='nama'], [name='nama']");
+        const nama = form.querySelector("[name='nama']");
         if (nama && nama.value.trim() === "") {
             tampilkanError(nama, "Nama wajib diisi.");
             valid = false;
@@ -68,7 +68,7 @@ function initValidasiFormGuru() {
         }
 
         const nip = form.querySelector("[name='nip']");
-        if (nip && pengarang.value.trim() === "") {
+        if (nip && nip.value.trim() === "") {
             tampilkanError(nip, "NIP wajib diisi.");
             valid = false;
         } else if (nip) {
@@ -108,7 +108,7 @@ function initValidasiFormSiswa() {
         }
 
         const nisn = form.querySelector("[name='nisn']");
-        if (nisn && pengarang.value.trim() === "") {
+        if (nisn && nisn.value.trim() === "") {
             tampilkanError(nisn, "NISN wajib diisi.");
             valid = false;
         } else if (nisn) {
