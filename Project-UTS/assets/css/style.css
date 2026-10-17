@@ -223,32 +223,11 @@ td button:last-of-type:hover {
     overflow-x: auto;
 }
 
-.nav-toggle-label {
-    display: none;
-    font-size: 1.6rem;
-    color: var(--bg-surface);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 .error {
     display: block;
     color: var(--danger);
     font-size: 0.85rem;
     margin-top: 0.25rem;
-}
-
-.search-box {
-    margin-bottom: 1rem;
-}
-
-.search-box input {
-    width: 100%;
-    max-width: 320px;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--border-input);
-    border-radius: 4px;
 }
 
 .refresh-button p button{
@@ -308,12 +287,59 @@ form button[type="submit"]:hover {
     background-color: var(--btn-submit-hover);
 }
 
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+}
+
 /* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 1.25rem;
     color: var(--text-footer);
     font-size: 0.8rem;
+}
+
+/* === UTS ===*/
+.header-uts {
+    text-align: center;
+}
+
+.main-section-uts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: first;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.main-section-uts img {
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 4px;
+}
+
+.footer-uts {
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-uts img{
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    border-radius: 50%;
 }
 
 /* Tablet Device */
